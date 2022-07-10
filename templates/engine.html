@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/engine.css') }}">
+    <script src="{{url_for('static', filename='js/d3.min.js')}}" charset="utf-8"></script>
+    <script src="{{url_for('static', filename='js/engine.js')}}" charset="utf-8" defer></script>
+    <title>ikeesearch</title>
+  </head>
+  <body>
+      <h1>Get Your <span id="radio_value">Song</span> In One Type</h1>
+      <section class="choices">
+        <ul>
+          <li>
+            <input type="radio" name="choice"  id="song" value="" checked>
+            <label for="song">Song</label>
+          </li>
+          <li>
+            <input type="radio" name="choice" id="lyrics" value="">
+            <label for="lyrics">Lyrics</label>
+          </li>
+        </ul>
+      </section>
+      <div class="body">
+        <section class="search_bar">
+          <input id="search_input" type="text" name="" value="" placeholder="title or artist">
+          <button type="button" name="button">search</button>
+        </section>
+        <section class="search_triggered">
+        </section>
+      </div>
+  </body>
+</html>

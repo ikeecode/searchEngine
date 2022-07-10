@@ -1,0 +1,228 @@
+body{
+  font-family: 'Pacifico', cursive;
+  padding: 0;
+  margin: 0;
+  /* background-color: green; */
+  /* position: absolute; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* z-index: 1; */
+}
+
+h1, section.choices{
+  position: absolute;
+  top: -2%;
+  opacity: .7;
+}
+
+section.choices{
+  right: 10%;
+}
+
+section.choices ul {
+  list-style-type: none;
+}
+
+div.body{
+  position: absolute;
+  /* left: 10%; */
+  border-left: 7px solid #7DE2D1;
+  border-right: 7px solid #F04E98;
+  border-top:  7px solid #005A9E;
+  border-bottom: 7px solid #FEC514;
+  /* border-radius: 10px; */
+  width: 60vw;
+  height: 0vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  /* opacity: .7; */
+
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(13.1px);
+  -webkit-backdrop-filter: blur(13.1px);
+  /* border: 1px solid rgba(255, 255, 255, 0.62); */
+  transition: 1s;
+}
+
+
+
+section.search_bar{
+  width: 100%;
+  height: 30%;
+  /* border: 2px dashed white; */
+  background-color: ;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  /* z-index: 2; */
+}
+
+
+section.search_bar input, button{
+  height: 60px;
+}
+
+
+/* notre barre de recherche */
+section.search_bar input {
+  font-family: 'Pacifico', cursive;
+  font-size: 22px;
+  width: 70%;
+  /* border: none; */
+  /* border-bottom: 2px solid; */
+  border-radius: 15px 0 0 15px;
+  outline: none;
+  text-align: center;
+}
+
+/* le button de la barre de recherche */
+section.search_bar button {
+  width: 100px;
+  height: 64px;
+  font-size: 22px;
+  border-radius: 0 15px 15px 0;
+
+}
+
+
+/* la barre qui contient les resultats temporaires */
+
+section.search_triggered {
+  /* border: 2px solid; */
+  width: 90%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+/* resultat d'une recherche */
+
+article.search_result {
+  width: 90%;
+  /* border: 2px solid; */
+  height: 300px;
+}
+
+article.search_result span{
+  /* background-color: black; */
+  width: 200px;
+  /* border: 2px solid green; */
+  /* border-radius: 11px 0 0 0; */
+}
+
+article.search_result span a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+article.search_result:nth-child(2n+1) p {
+  border: 2px solid;
+  background: rgba(213, 217, 130, 0.42);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.4px);
+  -webkit-backdrop-filter: blur(12.4px);
+  border: 5px solid rgba(213, 217, 130, 0.3);
+}
+
+article.search_result:nth-child(2n) p {
+  border: 2px solid;
+  background: rgba(124, 90, 90, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.4px);
+  -webkit-backdrop-filter: blur(12.4px);
+  border: 5px solid rgba(213, 217, 130, 0.3);
+}
+
+article.search_result p.search_head{
+  width: 70%;
+  border-radius: 5px 5px 0 0;
+  background: rgba(90, 128, 110, 0.84);
+  /* border-radius: 16px; */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(90, 128, 110, 0.3);
+  text-align: center;
+  transition: .5s;
+}
+
+article.search_result p.search_head:hover{
+  background: rgba(190, 128, 110, 0.84);
+
+}
+
+
+/* les cartes des lyrics */
+section.search_triggered article.lyrics_card{
+  /* border: 2px solid; */
+  margin-top: 2px;
+
+}
+
+section.search_triggered article.lyrics_card:nth-child(2n) p.lyrics_head{
+  width: 70%;
+  background-color: #9BBE41;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.4px);
+  -webkit-backdrop-filter: blur(12.4px);
+  transition: .5s;
+}
+
+
+
+section.search_triggered article.lyrics_card:nth-child(2n+1) p.lyrics_head{
+  width: 70%;
+  background-color: #00B9AD;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.4px);
+  -webkit-backdrop-filter: blur(12.4px);
+}
+
+section.search_triggered article.lyrics_card p.lyrics_head:hover{
+  background-color: #F04E98;
+}
+
+section.search_triggered article.lyrics_card p.lyrics_display{
+  width: 100%;
+  /* background-color: #D06598; */
+  /* background: rgba(0, 164, 222, 0.52); */
+  /* border-radius: 16px; */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.4px);
+  -webkit-backdrop-filter: blur(5.4px);
+}
+
+a._alink{
+  text-decoration: none;
+  color: black;
+}
+
+/* les barres du scroll */
+.search_triggered::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #aaa; /* or add it to the track */
+}
+/* Add a thumb */
+.search_triggered::-webkit-scrollbar-thumb {
+    background: #005A9E;
+}
