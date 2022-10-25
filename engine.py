@@ -39,6 +39,9 @@ def searchInput(option, search):
         return jsonify(data), 200
 
 
+@engine.route('/demographic', methods=['GET'])
+def searchPopulation():
+    return jsonify("{'message': 'this is some young generation'}"), 200 
 
 
 if __name__ == '__main__':
